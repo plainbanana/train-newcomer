@@ -10,7 +10,7 @@ exec ( $command, $output, $ret );
   }
 
 // loadaverage
-$command='top -n 1 | grep "load average" | awk "{ print $11 }" | sed "s/,$//"';
+$command="top -n 1 | grep 'load average' | awk '{ print $11 }'' | sed 's/,$//'";
 exec ( $command, $output, $ret );
   foreach ($output as $line){
     print $line."<br>\n";
